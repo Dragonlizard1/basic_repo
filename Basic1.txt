@@ -2,3 +2,18 @@ whatever you want
 THis is basic_repo assignment
 
 File has been modified. YEA!!
+
+If file is index.locked this is the way to fix it
+rm .git/index.lock
+rm .git/index
+git read-tree --reset HEAD
+
+
+If file is untrack or modified and wont update the git hub.
+must go into each folder look for .git that is created
+ls -alf
+rm -rf .git                     -- to remove the git
+git rm -r --cache .             -- re empty the cache.
+git add .                       -- to re add the file again and rest is same to push up
+git commit -m "fixing git track"
+git push origin master
